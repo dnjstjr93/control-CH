@@ -1,0 +1,17 @@
+{
+  "name": "control-CH",
+  "version": "1.0.0",
+  "description": "",
+  "main": "control.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mqtt": "^4.3.7",
+    "nanoid": "^3.1.30",
+    "onoff": "^6.0.3"
+  }
+}
