@@ -51,7 +51,15 @@ function local_mqtt_connect() {
             if (topic === control_topic) {
                 let msg_obj = JSON.parse(message.toString());
                 console.log('[Control]', msg_obj);
-                ch[msg_obj.channel].writeSync(msg_obj.value);
+                if (msg_obj.channel === 7) {
+                    if (msg_obj.value === 0) {
+                        ch[msg_obj.channel].writeSync(0);
+                    } else {
+                        ch[msg_obj.channel].writeSync(1);
+                    }
+                } else {
+                    ch[msg_obj.channel].writeSync(msg_obj.value);
+                }
             }
         });
 
