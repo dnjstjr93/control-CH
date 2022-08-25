@@ -51,7 +51,7 @@ function local_mqtt_connect() {
             if (topic === control_topic) {
                 let msg_obj = JSON.parse(message.toString());
                 console.log('[Control]', msg_obj);
-                ch[msg_obj.channel].writeSync(msg_obj.channel);
+                ch[msg_obj.channel].writeSync(msg_obj.value);
             }
         });
 
