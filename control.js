@@ -10,9 +10,9 @@ let local_mqtt_client = null;
 let control_topic = '/Control';
 
 let ch = {}
-ch['7'] = new Gpio(17, 'out');
-ch['8'] = new Gpio(18, 'out');
-ch['9'] = new Gpio(19, 'out');
+ch['7'] = new Gpio(7, 'out');
+ch['8'] = new Gpio(8, 'out');
+ch['9'] = new Gpio(9, 'out');
 ch['10'] = new Gpio(10, 'out');
 ch['11'] = new Gpio(11, 'out');
 ch['12'] = new Gpio(12, 'out');
